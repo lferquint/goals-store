@@ -1,0 +1,23 @@
+{{>header}}
+
+<div class="principal-container"> 
+  <p style="margin-bottom: 20px;">Usuario: {{username}}</p>
+  {{>new-note-button}}
+  <h2 style="padding: 20px; color: rgba(0,0,0,0.3); text-align: center;">{{note_true_false}}</h2>
+    {{> modal-new-note}}
+
+  <div class="note-container">
+
+    {{#each posts_from_user}}
+        {{>note}}
+    {{/each}}
+
+  </div>
+</div>
+
+
+
+
+
+</div>
+{{>footer}}

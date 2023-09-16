@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Esto es el dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="http://192.168.1.110:3000/static/css/style.css">
+    <link rel="stylesheet" href="http://192.168.1.110:3000/static/css/style-dashboard-user.css">
+    <style>
+
+    </style>
+</head>
+<body>
+    {{{body}}}
+    <script>
+        //Seleccionando cosas del DOM
+        let principal_container = document.querySelector('.principal-container');
+        const all_buttons_update = document.querySelectorAll('.update-button');
+
+        //Creando elementos en el DOM
+        let form_for_update = document.createElement('form');
+        let input_user_id = document.createElement('input');
+        let input_note_update = document.createElement('textarea');
+        let input_update_send = document.createElement('input');
+
+        //Alterando elementos creando
+        input_user_id.type = 'hidden';
+        input_user_id.name = 'User_id';
+
+        input_update_send.value = 'Actualizar nota';
+        input_update_send.type = 'submit';
+
+        form_for_update.method = "PUT";
+        form_for_update.action = 'http://localhost:3000/update';
+        form_for_update.append(input_user_id);
+        form_for_update.append(input_note_update);
+        form_for_update.append(input_update_send);
+
+
+        principal_container.append(form_for_update);
+
+        //conviertiendo arrayList en un array de Javascript
+        const array_all_buttons = Array.from(all_buttons_update);
+
+        //Agregando eventos para cada uno de los botones de actualizar
+        array_all_buttons.forEach((button_update)=>{
+            button_update.addEventListener('click', ()=>{
+                input_user_id.value = button_update.id;
+            });
+        });
+        form_for_update.addEventListener('submit', function(e){
+            e.preventDefault();
+             async function hola(){
+                 const response = await fetch('http://localhost:3000/update', {method: 'PUT'});
+                 const data = await response.json();
+                 console.log(data);
+             }
+             hola();
+
+        });
+
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
