@@ -1,16 +1,45 @@
 
   <div class="note">
     <div class="note-content">
-      {{note_content}}
+      {{meta_name}}
     </div>
-    <div class="note-date">
-      {{date_note}}
+    <span>Estado:</span>
+    <div class="note-date" style="color: red;">
+      {{meta_state}}
     </div>
     <div class="note-buttons">
-      <button class="update-button" id="{{id}}">Actualizar</button>
-      <button class="delete-button" id="{{id}}">Eliminar</button>
+      {{!-- <button class="update-button" id="{{id}}">Meta completada</button> --}}
+      
+      <form action="/delete/{{id}}" method="post">
+        <input type="hidden" name="username" value={{ username }}>
+        <input type="hidden" name="password" value={{ password }}>
+        <input type="submit" value="Completar meta" class="button_delete">
+
+      </form>
+      
     </div>
   </div>
 
   <!-- Puedes agregar más notas aquí -->
+<style>
+  .note-date{
+     text-transform: uppercase;
+  }
+  .button_delete{
+    padding: 10px;
+    display: block;
+    background: green;
+    color: white;
+    border: 0px solid black;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  .note-content{
+    font-size: 20px;
+    text-decoration: underline;
+  }
+</style>
+<script>
 
+</script>

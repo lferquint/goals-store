@@ -12,9 +12,9 @@ router.post('/new-user', (req, res)=>{
         // create the connection
         const connection = await mysql.createConnection({
             host:'srv550.hstgr.io',
-            user: 'u490408680_lferquint',
+            user: 'u490408680_fernando',
             password: 'Mgzalv.21',
-            database: 'u490408680_first_database', 
+            database: 'u490408680_second_db', 
         });
         // query database
         const data = await connection.execute(`INSERT INTO usuarios (username, email, password) values ('${req.body.username}', '${req.body.email}', '${req.body.password}');`);
