@@ -1,11 +1,12 @@
     <header class="header">
-        <div class="logo">{{title_header}}</div>
         <nav class="nav">
+            <div class="logo">
+                <img src="../../static/img/goals-store.png">
+            </div>
             <ul class="nav-list">
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Servicios</a></li>
-                <li><a href="#">Portafolio</a></li>
-                <li><a href="#">Contacto</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="/static/index.html">Login</a></li>
+                <li><a href="/static/new-account.html">Signin</a></li>
             </ul>
         </nav>
     </header>
@@ -13,7 +14,7 @@
 
 /* Estilos del encabezado */
 .header {
-    background-color: #333;
+    background-color: #15183a;
     color: white;
     display: flex;
     justify-content: space-between;
@@ -21,13 +22,30 @@
     padding: 20px;
 }
 
-.logo {
-    font-size: 24px;
-    font-weight: bold;
+header nav ul li{
+    display: inline-block;
+}
+header nav ul a{
+    color: white;
+    padding: 7px;
+    display: block;
+    text-decoration: none;
+}
+header nav ul{
+    display: flex;
+    align-items: center;
 }
 
-.nav {
-    display: none;
+header{
+    width: 100%;
+}
+header nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.logo img, footer img{
+    height: 50px;
 }
 
 /* Estilos para diseño responsive */

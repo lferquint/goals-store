@@ -5,4 +5,37 @@
 }
 body{
     font-family: monospace;
+    font-family: 'inter', sans-serif;
+
+}
+.principal-container{
+    padding: 75px 20px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.check{
+    width: 150px;
+    margin: 0 auto;
+    display: block;
+    padding: 20px;
+}
+h1{
+    text-align: center;
+    text-decoration: underline;
+}
+.volver{
+    display: block;
+    text-align: center;
+    padding: 20px;
+    border-radius: 4px;
+    border: 3px solid rgba(0,0,0);
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    width: fit-content;
+    margin: 0 auto;
+    transition: 0.3s;
+}
+.volver:hover{
+    transform: scale(1.05);
 }

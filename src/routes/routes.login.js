@@ -15,8 +15,7 @@ router.use('/login', (req, res)=>{
         // query database
         // console.log(req.body.password)
         const data = await connection.execute(`SELECT * FROM usuarios where usuarios.username = ? AND ? = usuarios.password`, [req.body.username, req.body.password]);
-        console.log(req.body.username);
-        console.log(req.body.password);
+  
         // console.log(data);
         if(data[0][0]){
             const data_2 = await connection.execute(`SELECT meta.meta_name, meta.meta_state, meta.id, usuarios.password, usuarios.username FROM meta JOIN usuarios on usuarios.id = meta.user_id WHERE usuarios.id = ${data[0][0].id};`);

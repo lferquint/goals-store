@@ -1,35 +1,43 @@
 <footer class="footer">
-    <div class="footer-content">
-        <div class="footer-logo">Mi Logo</div>
-        <ul class="footer-links">
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Acerca</a></li>
-            <li><a href="#">Contacto</a></li>
-        </ul>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="../static/img/goals-store.png">
+            </div>
+            <ul class="footer-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="/static/index.html">Login</a></li>
+                <li><a href="/static/new-account.html">Signin</a></li>
+            </ul>
+        </div>
+        <p class="footer-info">© 2023 Todos los derechos reservados</p>
     </div>
-    <p class="footer-info">© 2023 Todos los derechos reservados</p>
 </footer>
 <style>
-    /* Estilos del footer */
+  /* Estilos del footer */
 .footer {
-    background-color: #333;
+    background-color: #1c2c53;
     color: white;
-    padding: 20px 0;
+    padding: 40px 0;
     text-align: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .footer-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
 }
 
 .footer-logo {
     font-size: 24px;
     font-weight: bold;
+    color: #ffffff; /* Cambia el color a tu elección */
 }
 
 .footer-links {
@@ -41,10 +49,16 @@
 .footer-links a {
     color: white;
     text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #33a3ff; /* Cambia el color al pasar el mouse */
 }
 
 .footer-info {
-    margin-top: 10px;
+    margin-top: 20px;
+    font-size: 14px;
 }
 
 /* Estilos para diseño responsive */

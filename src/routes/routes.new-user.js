@@ -23,7 +23,7 @@ router.post('/new-user', (req, res)=>{
     main();
 
     
-    res.render('message', {content: req.body.username, layout: 'main'})
+    res.render('message', {content: req.body.username, layout: 'main', title_header: 'Hola'})
 
 });
 
