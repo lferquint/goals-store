@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const router = require('./routes/routes.new-user');
 const router_login = require('./routes/routes.login');
-const {engine} = require('express-handlebars');
+const exphbs  = require('express-handlebars');
 const path = require('path');
 const router_new_note = require('./routes/routes.create-note');
 const router_update = require('./routes/routes.uptade-note');
@@ -10,7 +10,7 @@ const router_delete = require('./routes/routes.delete');
 
 
 
-app.engine('handlebars', engine());
+app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
 app.set('views', path.join(__dirname, 'views'));
 
