@@ -15,7 +15,7 @@ app.set('view engine', 'handlebars');
 app.set('views', path.join(__dirname, 'views'));
 
 app.get('/', (req, res)=>{
-    res.render('landing-page');
+    res.render('landing-page', {layout: 'main'});
 });
 app.use(express.json());
 app.use('/static', express.static('./static'));
