@@ -42,7 +42,7 @@
   }
 
   .signup-container input[type="submit"] {
-    background-color: #27ae60;
+    background-color: #007BFF;
     color: #fff;
     border: none;
     padding: 10px;
@@ -75,7 +75,7 @@
 
     <div class="signup-container">
         <h1>Create account</h1>
-        <form action="http://192.168.1.110:3000/new-user" method="post">
+        <form action="/new-user" method="post">
           <label for="username">Username:</label>
           <input type="text" id="username" name="username">
       
@@ -88,7 +88,7 @@
           <input type="submit" value="Create account">
         </form>
         <p>do you have an account?</p>
-        <a href="http://localhost:3000/static/index.html">Log in</a>
+        <a href="/static/index.html">Log in</a>
       </div>
     
 </body>

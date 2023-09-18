@@ -38,7 +38,7 @@ router.use('/login', (req, res)=>{
                     layout: 'dashboard', 
                     username: `${req.body.username}`, 
                     title_header: 'Titulo personalizado', 
-                    note_true_false: '//Por ahora no tienes metas establecidas',
+                    note_true_false: "You don't have goals right now",
                     // posts_from_user: [
                     //     {note_value: 'Esta es mi primera nota', date_note: '2021-08-02'},
                     //     {note_value: 'Esta es mi segunda nota', date_note: '2021-02.03'}
@@ -62,7 +62,7 @@ router.use('/login', (req, res)=>{
             }
 
         }else{
-            res.send('usuario no encontrado')
+            res.send('usuario o contraseña incorrecta')
         }
     }
     main();
